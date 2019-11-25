@@ -25,7 +25,7 @@ show_proj_img = False
 jpg_files = glob.glob(os.path.join(IMG_DIR, "*.jpg"))
 uv_files = list(map(lambda x: os.path.join(os.path.dirname(x), os.path.splitext(os.path.basename(x))[0]+"_uv.txt"), jpg_files))
 edge_files = list(map(lambda x: os.path.join(os.path.dirname(x), os.path.splitext(os.path.basename(x))[0] + "-edge.png"), jpg_files))
-meta_files = list(map(lambda x: os.path.join(os.path.dirname(x), (os.path.splitext(os.path.basename(x))[0]).rsplit("_", 1)[0] + ".txt"), jpg_files))
+meta_files = list(map(lambda x: os.path.join(os.path.dirname(x), os.path.splitext(os.path.basename(x))[0] + ".txt"), jpg_files))
 
 
 pc = np.loadtxt(os.path.join(IMG_DIR, "pc.txt"))
